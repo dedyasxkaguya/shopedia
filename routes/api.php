@@ -24,4 +24,6 @@ Route::get('/cart/user/{id}', [CartController::class,'userCart']);
 Route::post('/user/register', [UserController::class,'register']);
 Route::post('/user/login', [UserController::class,'login']);
 
-Route::post('cart/add', [CartController::class,'storeData']);
+Route::post('/product/add', [ProductController::class,'storeData']);
+
+Route::post('/cart/add', [CartController::class,'storeData']);

@@ -41,6 +41,7 @@ class CartController extends Controller
             $data->user_id = $request->user_id;
             $data->price = $request->price;
             $data->quantities = 1;
+            $data->image = $request->image;
             // $data->quantity = $request->quantity;
 
             $data->save();
