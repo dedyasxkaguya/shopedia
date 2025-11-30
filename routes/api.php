@@ -23,6 +23,7 @@ Route::get('/cart/user/{id}', [CartController::class,'userCart']);
 
 Route::post('/user/register', [UserController::class,'register']);
 Route::post('/user/login', [UserController::class,'login']);
+Route::post('/user/edit/{id}', [UserController::class,'updateProfile']);
 
 Route::post('/product/add', [ProductController::class,'storeData']);
 

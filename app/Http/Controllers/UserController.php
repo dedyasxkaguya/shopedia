@@ -60,4 +60,15 @@ class UserController extends Controller
             ]
         );
     }
+    public static function updateProfile(Request $request){
+        $data = User::find($request->id);
+        // return response()->json($request);
+        $image = $request->file('image')->store('profile_images');
+        $data->image = $image;
+        $data->update();
+        return response()->json([
+            "status"=>true,
+            "data"=>$data
+        ]);
+    }
 }
