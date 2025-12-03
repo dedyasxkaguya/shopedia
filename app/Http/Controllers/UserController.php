@@ -65,6 +65,7 @@ class UserController extends Controller
         // return response()->json($request);
         $image = $request->file('image')->store('profile_images');
         $data->image = $image;
+        $data->name = $request->name;
         $data->update();
         return response()->json([
             "status"=>true,
